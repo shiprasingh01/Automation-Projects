@@ -1,0 +1,28 @@
+package pages;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+public class FramesAndWindowsPage {
+	WebDriver driver;
+	
+	By windowsTab = By.xpath("//*[@id='toggleNav']/li[4]/a");
+	By newWindowTab = By.xpath("//*[@id='wrapper']/div/div[1]/div[1]/ul/li[2]/a");
+	
+	public FramesAndWindows() {
+		this.driver = driver;
+	}
+
+	public void clickOnWindowsTab() {
+		driver.switchTo().frame(1);
+		driver.findElement(windowsTab).click();
+	}
+	
+	public void getNewWindowMessage() {
+		this.clickOnWindowsTab();
+		driver.switchTo().frame(driver.findElements(By.tagName("iframe")).get(1));
+		driver.findElement(newWindowTab).click();
+		
+		
+	}
+}

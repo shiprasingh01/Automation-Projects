@@ -1,0 +1,39 @@
+package tests;
+
+import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+import base.BaseClass;
+import pages.SignInPage;
+import pages.WidgetTabPage;
+
+
+public class SignInTest extends BaseClass{
+	WebDriver driver = super.driver;
+	SignInPage signInPage = new SignInPage(driver);
+	
+	@Test(priority = 1)
+	public void testLoginMsg() {
+		signInPage.signinWithCredentials("bob_test", "test345");
+		String msg = signInPage.getInvalidLoginMsg();
+		String expectedMsg = "Invalid username password.";
+		Assert.assertEquals(msg, expectedMsg);
+	}
+
+	@Test(description = "check title of webpage", priority = 1)
+	public void testPageTitle() {
+		signInPage.signinWithCredentials("bob_test", "test123");
+		String title = signInPage.getTitle();
+		Assert.assertTrue(title.contains("Welcome to the Test"));
+	}
+
+	@Test(description = "Check count of widget elements",
+			priority = 2, dependsOnMethods = "testPageTitle")
+	public void checkWidgetcount() {
+		WidgetTabPage widgetTabPage = new WidgetTabPage(driver);
+		int count = widgetTabPage.countOfBoxes();
+		Assert.assertTrue(count > 0, "no widget elements found");
+		System.out.println("The number of elements in Widget tab is: " + count);
+	}
+}

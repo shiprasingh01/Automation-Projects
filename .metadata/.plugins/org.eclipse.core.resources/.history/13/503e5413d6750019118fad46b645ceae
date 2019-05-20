@@ -1,0 +1,23 @@
+package tests;
+
+import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+import base.BaseClass;
+import pages.SignInPage;
+import pages.WidgetTabPage;
+
+
+public class SignInTest extends BaseClass{
+	WebDriver driver = super.driver;
+	SignInPage signInPage = new SignInPage(driver);
+	
+	@Test(priority = 1)
+	public void testLoginMsg() {
+		signInPage.signinWithCredentials("bob_test", "test345");
+		String msg = signInPage.getInvalidLoginMsg();
+		String expectedMsg = "Invalid username password.";
+		Assert.assertEquals(msg, expectedMsg);
+	}
+}

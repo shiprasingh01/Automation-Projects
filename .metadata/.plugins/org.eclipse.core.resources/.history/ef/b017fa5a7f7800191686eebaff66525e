@@ -1,0 +1,17 @@
+package tests;
+
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+
+public class temp {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Calendar c = Calendar.getInstance();
+		int year = c.get(Calendar.YEAR);
+		int month = c.get(Calendar.MONTH);
+		System.out.println(new SimpleDateFormat("MMM").format(c.getTime()));
+		System.out.println(new SimpleDateFormat("yyyy").format(c.getTime()));
+		System.out.println(new SimpleDateFormat("dd").format(c.getTime()));
+	}
+}

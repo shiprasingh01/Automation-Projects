@@ -1,0 +1,44 @@
+package pages;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+public class DropDownPage {
+	WebDriver driver;
+	List<String> countryNames = null;
+
+	By dynamicTab = By.xpath("//section[@id=\'wrapper\']/nav/div/ul/li[5]/a");
+	By dropdown = By.xpath("//*[@id=\'toggleNav\']/li[5]/ul/li[2]/a");
+	By selectCountry = By.xpath("//*[@id='wrapper']/div/div[1]/div[1]/ul/li[1]/a");
+	By countryBlock = By.xpath("//html/body/select");
+
+	public DropDownPage(WebDriver driver) {
+		this.driver = driver;
+	}
+
+	public List<String> getCountryNames() {
+		driver.switchTo().frame(1);
+
+		WebElement dynamicElement = driver.findElement(dynamicTab);
+		Actions action = new Actions(driver);
+		action.moveToElement(dynamicElement);
+		driver.findElement(dropdown).click();
+		//driver.switchTo().defaultContent();
+		driver.switchTo().frame("demo-frame");
+		WebDriverWait wait = new WebDriverWait(driver, 10);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(selectCountry));
+		List<WebElement> countries = driver.findElements(By.tagName("option"));
+
+		for (WebElement country : countries) {
+			countryNames.add(country.getAttribute("value"));
+		}
+		return countryNames;
+	}
+
+}

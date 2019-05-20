@@ -1,0 +1,36 @@
+package tests;
+
+import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
+
+import base.BaseClass;
+import pages.SignInPage;
+
+public class SignInTest extends BaseClass{
+	WebDriver driver;
+	SignInPage signInPage;
+	
+	@BeforeClass
+	public void initialisePage() {
+		driver = super.driver;
+		signInPage = new SignInPage(driver); 
+	}
+	
+	@Test(description="Login with invalid id and pwd" , priority = 1)
+	public void testLoginMsg() {
+		signInPage.signinWithCredentials("bob_test", "test345");
+		String msg = signInPage.getInvalidLoginMsg();
+		String expectedMsg = "Invalid username password.";
+		Assert.assertEquals(msg, expectedMsg, "The message for invalid login is :" + msg);
+	}
+	
+	//@Test(description= "Login with valid credentials", priority = 2)
+	public void testPageTitle() {
+		signInPage.signinWithCredentials("bob_test", "test123");
+		String title = signInPage.getTitle();
+		Assert.assertTrue(title.contains("Welcome to the Test"));
+		System.out.println("The Title of the Page is: " + title);
+	}
+}

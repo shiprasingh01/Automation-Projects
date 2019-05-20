@@ -1,0 +1,46 @@
+package pages;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+public class SignInPage {
+
+	WebDriver driver;
+	
+	By signIn = By.xpath("(//*[@id=\'load_form\']/div/div[1]/p/a)[2]");
+	By userName = By.xpath("(//*[@id=\'load_form\']/fieldset[1]/input)[2]");
+	By password = By.xpath("(//*[@id=\'load_form\']/fieldset[2]/input)[2]");
+	By submitBtn = By.xpath("(//input[@class=\'button\'])[2]");
+	By loginMsg = By.xpath("(//form/p)[2]");
+	
+	public SignInPage(WebDriver driver) {
+		this.driver = driver;
+	}
+
+	public void clickOnSignButton() {
+		WebElement login = driver.findElement(signIn);
+		WebDriverWait wait = new WebDriverWait(driver,10);
+		wait.until(ExpectedConditions.elementToBeClickable(login));
+		login.click();
+	}
+	
+	public void signinWithCredentials(String userId, String pword) {
+		this.clickOnSignButton();
+		driver.findElement(userName).sendKeys(userId);
+		driver.findElement(password).sendKeys(pword);
+		driver.findElement(submitBtn).click();
+	}
+	
+	public String getInvalidLoginMsg() {
+		String msg = driver.findElement(loginMsg).getText();
+		System.out.println("The message for invalid login is :" +msg);
+		return msg;
+	}
+
+	public String getTitle() {
+		return driver.getTitle();
+	}
+}

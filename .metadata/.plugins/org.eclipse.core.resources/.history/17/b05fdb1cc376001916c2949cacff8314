@@ -1,0 +1,36 @@
+package pages;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+
+public class DroppablePage {
+	WebDriver driver;
+
+	By dropImage = By.xpath("//*[@id='wrapper']/div[2]/div[2]/div[1]/ul/li[2]/a/figure/img");
+	By dropBlock = By.xpath("//*[@id=\'wrapper\']/div/div[1]/div[1]/ul/li[1]");
+	By draggable = By.xpath("//*[@id='draggable']");
+	By droppable = By.xpath("//*[@id='droppable']");
+
+	public DroppablePage(WebDriver driver) {
+
+		this.driver = driver;
+	}
+
+	public void clickOnDroppable() {
+		driver.switchTo().frame(1);
+		driver.findElement(dropImage).click();
+		
+	}
+
+	public void dragAndDrop() {
+		this.clickOnDroppable();
+		driver.findElement(dropBlock).click();
+		driver.switchTo().frame(2);
+		WebElement drag = driver.findElement(draggable);
+		WebElement drop = driver.findElement(droppable);
+		Actions action = new Actions(driver);
+		action.dragAndDrop(drag, drop).perform();
+	}
+}

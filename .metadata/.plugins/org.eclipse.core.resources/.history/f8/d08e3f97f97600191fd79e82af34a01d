@@ -1,0 +1,84 @@
+package pages;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+public class SignInPage {
+
+	WebDriver driver;
+
+	//By signIn = By.xpath("(//*[@id=\'load_form\']/div/div[1]/p/a)[2]");
+	By signInButtonLocator = By.className("fancybox");
+	//By userName = By.xpath("(//*[@id=\'load_form\']/fieldset[1]/input)[2]");
+	By userNameLocator = By.name("username");
+	//By password = By.xpath("(//*[@id=\'load_form\']/fieldset[2]/input)[2]");
+	By passwordLocator = By.name("password");
+	//By submitBtn = By.xpath("(//input[@class=\'button\' and @value=\'Submit\'])[2]");
+	By submitButtonLocator = By.className("button");
+	//By loginMsg = By.xpath("(//form/p)[2]");
+	By loginMsgLocator = By.id("alert1");
+
+	public SignInPage(WebDriver driver) {
+		this.driver = driver;
+	}
+
+	public void clickOnSignButton() {
+		WebElement signInButtonElement = driver.findElements(signInButtonLocator).get(2);
+		WebDriverWait wait = new WebDriverWait(driver, 10);
+		signInButtonElement = wait.until(ExpectedConditions
+				.elementToBeClickable(signInButtonElement));
+		if(signInButtonElement != null) {
+			signInButtonElement.click();
+		}
+	}
+	
+	public void enterUsername(String userName) {
+		WebElement userNameElement = driver.findElements(userNameLocator).get(1);
+		WebDriverWait wait = new WebDriverWait(driver, 10);
+		userNameElement = wait.until(ExpectedConditions
+				.visibilityOf(userNameElement));
+		if(userNameElement != null) {
+			userNameElement.sendKeys(userName);;
+		}
+	}
+	
+	public void enterPassword(String pwd) {
+		WebElement passwordeElement = driver.findElements(passwordLocator).get(1);
+		WebDriverWait wait = new WebDriverWait(driver, 10);
+		passwordeElement = wait.until(ExpectedConditions
+				.visibilityOf(passwordeElement));
+		if(passwordeElement != null) {
+			passwordeElement.sendKeys(pwd);;
+		}
+	}
+	
+	public void clickSubmitButton() {
+		WebElement submitButtonElement = driver.findElements(submitButtonLocator).get(1);
+		WebDriverWait wait = new WebDriverWait(driver, 10);
+		submitButtonElement = wait.until(ExpectedConditions
+				.elementToBeClickable(submitButtonElement));
+		if(submitButtonElement != null) {
+			submitButtonElement.click();
+		}
+	}
+
+	public void signinWithCredentials(String userId, String pword) {
+		this.clickOnSignButton();
+		this.enterUsername(userId);
+		this.enterPassword(pword);
+		this.clickSubmitButton();
+	}
+
+	public String getInvalidLoginMsg() {
+		String msg = driver.findElement(loginMsgLocator).getText();
+		//System.out.println("The message for invalid login is :" + msg);
+		return msg;
+	}
+
+	public String getTitle() {
+		return driver.getTitle();
+	}
+}

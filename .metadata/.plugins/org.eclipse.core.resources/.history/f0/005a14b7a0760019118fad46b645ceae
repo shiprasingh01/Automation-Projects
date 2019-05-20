@@ -1,0 +1,28 @@
+package pages;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+public class WidgetTabPage {
+
+	WebDriver driver;
+	// By widgetBlock = By.xpath("//*[@id='wrapper']");
+	By widgetTab = By.xpath("//*[@id=\'toggleNav\']/li[3]/a");
+	By list = By.xpath("//*[@id=\'toggleNav\']/li[3]/ul/li");
+
+	public WidgetTabPage(WebDriver driver) {
+		this.driver = driver;
+	}
+
+	public int countOfBoxes() {
+
+		driver.switchTo().frame(1);
+		driver.findElement(widgetTab).click();
+		List<WebElement> listElements = driver.findElements(list);
+		int count = listElements.size();
+		return count;
+	}
+}

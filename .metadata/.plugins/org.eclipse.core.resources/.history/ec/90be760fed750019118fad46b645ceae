@@ -1,0 +1,25 @@
+package pages;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+public class AlertPage {
+	WebDriver driver;
+
+	By alertTab = By.xpath("//*[@id=\"toggleNav\"]/li[7]/a");
+	By alertBox = By.xpath("/html/body/button");
+
+	public AlertPage(WebDriver driver) {
+		this.driver = driver;
+	}
+
+	public void clickAlertTab() {
+		driver.findElement(alertTab).click();
+	}
+
+	public void handleAlert() {
+		this.clickAlertTab();
+		driver.switchTo().frame(1);
+		driver.findElement(alertBox).click();
+	}
+}

@@ -1,0 +1,9 @@
+package tests;
+
+public class temp {
+
+	public static void main(String[] args) {
+		char randomChar = (char)(Math.random() * ('Z' - 'A' + 1) + 'A');
+		System.out.println(String.valueOf(randomChar));
+	}
+}

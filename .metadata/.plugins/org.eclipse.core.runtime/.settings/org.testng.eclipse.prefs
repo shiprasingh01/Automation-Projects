@@ -1,0 +1,4 @@
+SeleniumPractice.outdir=test-output
+SeleniumTestProject.disabledListeners=true
+SeleniumTestProject.outdir=test-output
+eclipse.preferences.version=1

@@ -1,0 +1,42 @@
+package pages;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.Select;
+
+public class DropDownPage {
+	WebDriver driver;
+	List<String> countryNames;
+
+	By dynamicTab = By.xpath("//*[@id=\'toggleNav\']/li[5]/a");
+	By dropDown = By.xpath("//*[@id=\'toggleNav\']/li[5]/ul/li[2]/a");
+	By country = By.xpath("/html/body/select[option]");
+	
+
+	public DropDownPage(WebDriver driver) {
+		this.driver = driver;
+	}
+
+	public void CountryNames() {
+
+		WebElement dynamicElement = driver.findElement(dynamicTab);
+		Actions action = new Actions(driver);
+		action.moveToElement(dynamicElement).moveToElement(driver.findElement(dropDown)).click().perform();
+
+		// driver.switchTo().defaultContent();
+		driver.switchTo().frame(1);
+		Select select = new Select(driver.findElement(country));
+		select.selectByVisibleText("Angola");
+		/*List<WebElement> countries = countryBlocksel.findElements(By.tagName("option"));
+		// countryNames=null;
+		for (WebElement country : countries) {
+			countryNames.add(country.getAttribute("value"));
+		}
+		return countryNames;
+	}*/
+
+}

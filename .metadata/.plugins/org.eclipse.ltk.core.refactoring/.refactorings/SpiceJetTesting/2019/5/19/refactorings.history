@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy package &apos;utils&apos; to &apos;SeleniumProject/src/main/java&apos;&#x0D;&#x0A;- Original project: &apos;SpiceJetTesting&apos;&#x0D;&#x0A;- Destination element: &apos;SeleniumProject/src/main/java&apos;&#x0D;&#x0A;- Original element: &apos;SpiceJetTesting/src/utils&apos;" description="Copy package" destination="=SeleniumProject/src\/main\/java" element1="/src&lt;utils" flags="589830" fragments="1" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1557533723236" version="1.0"/>
+</session>

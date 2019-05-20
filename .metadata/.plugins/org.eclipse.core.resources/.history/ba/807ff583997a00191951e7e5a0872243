@@ -1,0 +1,47 @@
+package tests;
+
+import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
+
+import base.BaseClass;
+import pages.SignInPage;
+
+public class SignInTest extends BaseClass{
+	WebDriver driver;
+	SignInPage signInPage;
+	
+	@BeforeClass
+	public void initialisePage() {
+		driver = super.driver;
+		signInPage = new SignInPage(driver); 
+	}
+	
+	@Test(description = "Capturing Message without entering credentials", priority = 1)
+	public void testWithoutLoginMessage()
+	{
+		signInPage.signinWithCredentials("", "");
+		String requiredMsg = signInPage.getAlertMessage();
+		Assert.assertTrue(requiredMsg!=null);
+		System.out.println("The message received is :"+requiredMsg);
+		
+	}
+	
+	@Test(description="Login with invalid id and pwd" , priority = 2)
+	public void testLoginMsg() {
+		signInPage.signinWithCredentials("bob_test", "test345");
+		String msgAfterLogin = signInPage.getInvalidLoginMsg();
+		String expectedMsg = "Invalid username password.";
+		Assert.assertTrue(msgAfterLogin.contains(expectedMsg));
+		System.out.println("The message for invalid login is :"+msgAfterLogin);
+	}
+	
+	@Test(description= "Login with valid credentials", priority = 3)
+	public void testPageTitle() {
+		signInPage.signinWithCredentials("bob_test", "test123");
+		String title = signInPage.getTitle();
+		Assert.assertTrue(title.contains("Welcome to the Test"));
+		System.out.println("The Title of the Page is: " + title);
+	}
+}

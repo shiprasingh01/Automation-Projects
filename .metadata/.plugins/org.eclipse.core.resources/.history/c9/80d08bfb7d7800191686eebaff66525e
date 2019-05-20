@@ -1,0 +1,66 @@
+package pages;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+public class DatePickerPage {
+	WebDriver driver;
+	By datePickerBox = By.xpath("//*[@id='wrapper']/div[2]/div[2]/div[2]/ul/li[3]/a/figure/img");
+	By dateBox = By.xpath("//*[@id='datepicker']");
+	By currentMonth = By.xpath("//*[@id='ui-datepicker-div']/div/div/span[1]");
+	By currentYear = By.xpath("//*[@id='ui-datepicker-div']/div/div/span[2]");
+	By monthChangeButton = By.xpath("//*[@id='ui-datepicker-div']/div/a[2]/span");
+	By dateBlock = By.xpath("//*[@id='ui-datepicker-div']/table/tbody");
+	By monthYear = By.xpath("//*[@id='ui-datepicker-div']/div/div");
+
+	public DatePickerPage(WebDriver driver) {
+		this.driver = driver;
+	}
+
+	public void clickDatePicker() {
+		driver.switchTo().frame(1);
+		driver.findElement(datePickerBox).click();
+	}
+
+	public String getDate(String month, String date) {
+		this.clickDatePicker();
+		driver.switchTo().frame(driver.findElements(By.tagName("iframe")).get(0));
+		WebElement dateTextBox = driver.findElement(dateBox);
+		dateTextBox.click();
+		
+		String calMonthYear = driver.findElement(monthYear).getText();
+		if (calMonthYear.equals(month)) {
+			System.out.println("on the same month and year");
+		} else {
+			for (int i = 1; i < 12; i++) {
+				WebElement nextButton = driver.findElement(monthChangeButton);
+				nextButton.click();
+				WebDriverWait wait = new WebDriverWait(driver, 5);
+				wait.until(ExpectedConditions.visibilityOf(nextButton));
+				calMonthYear = driver.findElement(monthYear).getText();
+				if (calMonthYear.equals(month)) {
+					System.out.println("month and year selected");
+					break;
+				}
+
+			}
+		}
+		WebElement dateTable = driver.findElement(dateBlock);
+		List<WebElement> dates = dateTable.findElements(By.tagName("a"));
+		for(WebElement date1:dates) {
+			String calDate = date1.getText();
+			if(calDate.equals(date)) {
+				date1.click();
+				break;
+			}
+		}
+		String textBox= dateTextBox.getText();
+		return textBox;
+		
+	}
+}

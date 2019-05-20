@@ -1,0 +1,64 @@
+package tests;
+
+import java.util.List;
+
+import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
+import org.testng.annotations.Test;
+import base.BaseClass;
+import pages.AlertPage;
+import pages.DropDownPage;
+import pages.SignInPage;
+import pages.WidgetTabPage;
+
+public class AfterLogin extends BaseClass {
+	WebDriver driver;
+	SignInPage signInPage;
+	DropDownPage dropDownPage;
+	WidgetTabPage widgetTabPage;
+	AlertPage alertPage;
+
+	@Test(description = "login and check title of webpage", priority = 1)
+	public void testPageTitle() {
+		driver = super.driver;
+		signInPage = new SignInPage(driver);
+		dropDownPage = new DropDownPage(driver);
+		widgetTabPage = new WidgetTabPage(driver);
+		signInPage.signinWithCredentials("bob_test", "test123");
+		String title = signInPage.getTitle();
+		Assert.assertTrue(title.contains("Welcome to the Test"));
+		System.out.println("The Title of the Page is: " + title);
+	}
+
+	//@Test(description = "Check count of widget elements", priority = 2)
+	public void checkWidgetcount() {
+		int count = widgetTabPage.countOfBoxes();
+		Assert.assertTrue(count > 0, "no widget elements found");
+		System.out.println("The number of elements in Widget tab is: " + count);
+	}
+
+	/*(description = "Get country name from dropdown", priority = 3)
+	public void count() {
+
+		List<String> countries = dropDownPage.getCountryNames();
+		Assert.assertTrue(countries.size() > 0);
+		System.out.println("The total no. of countries in dropdown are: " + countries.size());
+		System.out.println("The Names of Countries are: ");
+		for (String countryName : countries) {
+			System.out.println(countryName);
+		}
+	}*/
+
+	@Test(description = "click on Alert tab", priority = 3)
+	public void alert() {
+		alertPage = new AlertPage(driver);
+		alertPage.handleAlert();
+	}
+
+	// @AfterTest
+	public void refreshBrowser() {
+		String baseUrl = "http://way2automation.com/way2auto_jquery/index.php";
+		driver.get(baseUrl);
+	}
+
+}

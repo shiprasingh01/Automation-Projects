@@ -1,0 +1,52 @@
+package pages;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+public class DatePickerPage {
+	WebDriver driver;
+	By datePickerBox = By.xpath("//*[@id='wrapper']/div[2]/div[2]/div[2]/ul/li[3]/a/figure/img");
+	By dateBox = By.xpath("//*[@id='datepicker']");
+	By currentMonth = By.xpath("//*[@id='ui-datepicker-div']/div/div/span[1]");
+	By currentYear = By.xpath("//*[@id='ui-datepicker-div']/div/div/span[2]");
+	By monthChangeButton = By.xpath("//*[@id='ui-datepicker-div']/div/a[2]/span");
+	By date = By.xpath("//*[@id='ui-datepicker-div']/table/tbody/tr[4]/td[2]/a");
+
+	public DatePickerPage(WebDriver driver) {
+		this.driver = driver;
+	}
+
+	public void clickDatePicker() {
+		driver.switchTo().frame(1);
+		driver.findElement(datePickerBox).click();
+	}
+
+	public void getDate(String month, String year) {
+		this.clickDatePicker();
+		driver.switchTo().frame(driver.findElements(By.tagName("iframe")).get(0));
+		WebElement dateTextBox = driver.findElement(dateBox);
+		dateTextBox.click();
+		String visibleMonth = driver.findElement(currentMonth).getText();
+		String visibleYear = driver.findElement(currentYear).getText();
+
+		if (visibleYear != year) {
+			WebElement nextButton = driver.findElement(monthChangeButton);
+			WebDriverWait wait = new WebDriverWait(driver, 10);
+			wait.until(ExpectedConditions.visibilityOf(nextButton));
+			nextButton.click();}
+			if (visibleMonth != month) {
+				WebElement nextButton = driver.findElement(monthChangeButton);
+				WebDriverWait wait = new WebDriverWait(driver, 10);
+				wait.until(ExpectedConditions.visibilityOf(nextButton));
+				nextButton.click();}
+			
+				driver.findElement(date).click();
+			
+		
+		// String selectedDate = dateTextBox.getText();
+		// return selectedDate; }
+	}
+}

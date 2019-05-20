@@ -1,0 +1,23 @@
+package pages;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+public class AutoCompletePage {
+
+	WebDriver driver;
+	By autoCompTab = By.xpath("//*[@id='wrapper']/div[2]/div[2]/div[2]/ul/li[2]/a/figure/img");
+
+	public AutoCompletePage(WebDriver driver) {
+		this.driver = driver;
+	}
+
+	public void clickOnAutocompletetTab() {
+		driver.switchTo().frame(1);
+		driver.findElement(autoCompTab).click();
+	}
+	
+	public String getTextFromAutoBox() {
+		
+	}
+}

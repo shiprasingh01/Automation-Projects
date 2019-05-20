@@ -1,0 +1,527 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="8" failed="0" ignored="4" total="15" passed="3">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Selenium Test Suite" duration-ms="5637" started-at="2019-05-20T01:21:36Z" finished-at="2019-05-20T01:21:42Z">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="5637" started-at="2019-05-20T01:21:36Z" finished-at="2019-05-20T01:21:42Z">
+      <class name="tests.AfterLogin">
+        <test-method status="FAIL" signature="testPageTitle()[pri:0, instance:tests.AfterLogin@685cb137]" name="testPageTitle" is-config="true" duration-ms="0" started-at="2019-05-20T01:21:38Z" finished-at="2019-05-20T01:21:38Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+at pages.SignInPage.clickOnSignButton(SignInPage.java:30)
+at pages.SignInPage.signinWithCredentials(SignInPage.java:74)
+at tests.AfterLogin.testPageTitle(AfterLogin.java:30)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:523)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPageTitle -->
+        <test-method status="SKIP" signature="checkWidgetcount()[pri:1, instance:tests.AfterLogin@685cb137]" name="checkWidgetcount" duration-ms="0" started-at="2019-05-20T01:21:38Z" description="Check count of widget elements" finished-at="2019-05-20T01:21:38Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+at pages.SignInPage.clickOnSignButton(SignInPage.java:30)
+at pages.SignInPage.signinWithCredentials(SignInPage.java:74)
+at tests.AfterLogin.testPageTitle(AfterLogin.java:30)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:523)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkWidgetcount -->
+        <test-method status="SKIP" signature="refreshBrowser()[pri:0, instance:tests.AfterLogin@685cb137]" name="refreshBrowser" is-config="true" duration-ms="0" started-at="2019-05-20T01:21:38Z" finished-at="2019-05-20T01:21:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- refreshBrowser -->
+        <test-method status="SKIP" signature="testPageTitle()[pri:0, instance:tests.AfterLogin@685cb137]" name="testPageTitle" is-config="true" duration-ms="0" started-at="2019-05-20T01:21:40Z" finished-at="2019-05-20T01:21:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPageTitle -->
+        <test-method status="SKIP" signature="checkCountryCount()[pri:2, instance:tests.AfterLogin@685cb137]" name="checkCountryCount" duration-ms="0" started-at="2019-05-20T01:21:40Z" description="Get country name from dropdown" finished-at="2019-05-20T01:21:40Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+at pages.SignInPage.clickOnSignButton(SignInPage.java:30)
+at pages.SignInPage.signinWithCredentials(SignInPage.java:74)
+at tests.AfterLogin.testPageTitle(AfterLogin.java:30)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:523)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkCountryCount -->
+        <test-method status="SKIP" signature="refreshBrowser()[pri:0, instance:tests.AfterLogin@685cb137]" name="refreshBrowser" is-config="true" duration-ms="0" started-at="2019-05-20T01:21:40Z" finished-at="2019-05-20T01:21:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- refreshBrowser -->
+        <test-method status="SKIP" signature="testPageTitle()[pri:0, instance:tests.AfterLogin@685cb137]" name="testPageTitle" is-config="true" duration-ms="0" started-at="2019-05-20T01:21:42Z" finished-at="2019-05-20T01:21:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPageTitle -->
+        <test-method status="SKIP" signature="alert()[pri:3, instance:tests.AfterLogin@685cb137]" name="alert" duration-ms="0" started-at="2019-05-20T01:21:42Z" description="click on Alert tab" finished-at="2019-05-20T01:21:42Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+at pages.SignInPage.clickOnSignButton(SignInPage.java:30)
+at pages.SignInPage.signinWithCredentials(SignInPage.java:74)
+at tests.AfterLogin.testPageTitle(AfterLogin.java:30)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:523)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- alert -->
+        <test-method status="SKIP" signature="refreshBrowser()[pri:0, instance:tests.AfterLogin@685cb137]" name="refreshBrowser" is-config="true" duration-ms="0" started-at="2019-05-20T01:21:42Z" finished-at="2019-05-20T01:21:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- refreshBrowser -->
+      </class> <!-- tests.AfterLogin -->
+      <class name="tests.Tasks">
+        <test-method status="FAIL" signature="testPageTitle()[pri:0, instance:tests.Tasks@6a41eaa2]" name="testPageTitle" is-config="true" duration-ms="1" started-at="2019-05-20T01:21:38Z" finished-at="2019-05-20T01:21:38Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+at pages.SignInPage.clickOnSignButton(SignInPage.java:30)
+at pages.SignInPage.signinWithCredentials(SignInPage.java:74)
+at tests.Tasks.testPageTitle(Tasks.java:28)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:523)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPageTitle -->
+        <test-method status="SKIP" signature="newWindowMessage()[pri:1, instance:tests.Tasks@6a41eaa2]" name="newWindowMessage" duration-ms="0" started-at="2019-05-20T01:21:38Z" description="Opening a new window and fetching the text from it" finished-at="2019-05-20T01:21:38Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+at pages.SignInPage.clickOnSignButton(SignInPage.java:30)
+at pages.SignInPage.signinWithCredentials(SignInPage.java:74)
+at tests.Tasks.testPageTitle(Tasks.java:28)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:523)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- newWindowMessage -->
+        <test-method status="SKIP" signature="refreshBrowser()[pri:0, instance:tests.Tasks@6a41eaa2]" name="refreshBrowser" is-config="true" duration-ms="0" started-at="2019-05-20T01:21:38Z" finished-at="2019-05-20T01:21:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- refreshBrowser -->
+        <test-method status="SKIP" signature="testPageTitle()[pri:0, instance:tests.Tasks@6a41eaa2]" name="testPageTitle" is-config="true" duration-ms="0" started-at="2019-05-20T01:21:40Z" finished-at="2019-05-20T01:21:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPageTitle -->
+        <test-method status="SKIP" signature="doTasks()[pri:2, instance:tests.Tasks@6a41eaa2]" name="doTasks" duration-ms="0" started-at="2019-05-20T01:21:40Z" description="dragging and dropping the box" finished-at="2019-05-20T01:21:40Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+at pages.SignInPage.clickOnSignButton(SignInPage.java:30)
+at pages.SignInPage.signinWithCredentials(SignInPage.java:74)
+at tests.Tasks.testPageTitle(Tasks.java:28)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:523)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- doTasks -->
+        <test-method status="SKIP" signature="refreshBrowser()[pri:0, instance:tests.Tasks@6a41eaa2]" name="refreshBrowser" is-config="true" duration-ms="0" started-at="2019-05-20T01:21:40Z" finished-at="2019-05-20T01:21:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- refreshBrowser -->
+        <test-method status="SKIP" signature="testPageTitle()[pri:0, instance:tests.Tasks@6a41eaa2]" name="testPageTitle" is-config="true" duration-ms="0" started-at="2019-05-20T01:21:42Z" finished-at="2019-05-20T01:21:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPageTitle -->
+        <test-method status="SKIP" signature="printDate()[pri:3, instance:tests.Tasks@6a41eaa2]" name="printDate" duration-ms="0" started-at="2019-05-20T01:21:42Z" description="Printing and formatting date from DatePicker box" finished-at="2019-05-20T01:21:42Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+at pages.SignInPage.clickOnSignButton(SignInPage.java:30)
+at pages.SignInPage.signinWithCredentials(SignInPage.java:74)
+at tests.Tasks.testPageTitle(Tasks.java:28)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:523)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- printDate -->
+        <test-method status="SKIP" signature="refreshBrowser()[pri:0, instance:tests.Tasks@6a41eaa2]" name="refreshBrowser" is-config="true" duration-ms="0" started-at="2019-05-20T01:21:42Z" finished-at="2019-05-20T01:21:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- refreshBrowser -->
+        <test-method status="SKIP" signature="testPageTitle()[pri:0, instance:tests.Tasks@6a41eaa2]" name="testPageTitle" is-config="true" duration-ms="0" started-at="2019-05-20T01:21:42Z" finished-at="2019-05-20T01:21:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPageTitle -->
+        <test-method status="SKIP" signature="printTextFromAutocomplete()[pri:4, instance:tests.Tasks@6a41eaa2]" name="printTextFromAutocomplete" duration-ms="0" started-at="2019-05-20T01:21:42Z" description="performing actions on Autocomplete box" finished-at="2019-05-20T01:21:42Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+at pages.SignInPage.clickOnSignButton(SignInPage.java:30)
+at pages.SignInPage.signinWithCredentials(SignInPage.java:74)
+at tests.Tasks.testPageTitle(Tasks.java:28)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:523)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- printTextFromAutocomplete -->
+        <test-method status="SKIP" signature="refreshBrowser()[pri:0, instance:tests.Tasks@6a41eaa2]" name="refreshBrowser" is-config="true" duration-ms="0" started-at="2019-05-20T01:21:42Z" finished-at="2019-05-20T01:21:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- refreshBrowser -->
+        <test-method status="SKIP" signature="testPageTitle()[pri:0, instance:tests.Tasks@6a41eaa2]" name="testPageTitle" is-config="true" duration-ms="0" started-at="2019-05-20T01:21:42Z" finished-at="2019-05-20T01:21:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPageTitle -->
+        <test-method status="SKIP" signature="printRandomTextFromAutocomplete()[pri:5, instance:tests.Tasks@6a41eaa2]" name="printRandomTextFromAutocomplete" duration-ms="0" started-at="2019-05-20T01:21:42Z" description="performing random action on Autocomplete box" finished-at="2019-05-20T01:21:42Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+at pages.SignInPage.clickOnSignButton(SignInPage.java:30)
+at pages.SignInPage.signinWithCredentials(SignInPage.java:74)
+at tests.Tasks.testPageTitle(Tasks.java:28)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:523)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- printRandomTextFromAutocomplete -->
+        <test-method status="SKIP" signature="refreshBrowser()[pri:0, instance:tests.Tasks@6a41eaa2]" name="refreshBrowser" is-config="true" duration-ms="0" started-at="2019-05-20T01:21:42Z" finished-at="2019-05-20T01:21:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- refreshBrowser -->
+      </class> <!-- tests.Tasks -->
+      <class name="tests.SignInTest">
+        <test-method status="PASS" signature="initialiseSuite()[pri:0, instance:tests.SignInTest@6a4f787b]" name="initialiseSuite" is-config="true" duration-ms="9124" started-at="2019-05-20T01:21:27Z" finished-at="2019-05-20T01:21:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialiseSuite -->
+        <test-method status="PASS" signature="initialisePage()[pri:0, instance:tests.SignInTest@6a4f787b]" name="initialisePage" is-config="true" duration-ms="7" started-at="2019-05-20T01:21:36Z" finished-at="2019-05-20T01:21:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialisePage -->
+        <test-method status="PASS" signature="testWithoutLoginMessage()[pri:1, instance:tests.SignInTest@6a4f787b]" name="testWithoutLoginMessage" duration-ms="477" started-at="2019-05-20T01:21:36Z" description="Capturing Validation Message with blank credentials" finished-at="2019-05-20T01:21:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testWithoutLoginMessage -->
+        <test-method status="PASS" signature="refreshBrowser()[pri:0, instance:tests.SignInTest@6a4f787b]" name="refreshBrowser" is-config="true" duration-ms="770" started-at="2019-05-20T01:21:37Z" finished-at="2019-05-20T01:21:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- refreshBrowser -->
+        <test-method status="PASS" signature="initialisePage()[pri:0, instance:tests.SignInTest@6a4f787b]" name="initialisePage" is-config="true" duration-ms="1" started-at="2019-05-20T01:21:38Z" finished-at="2019-05-20T01:21:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialisePage -->
+        <test-method status="PASS" signature="testLoginMsg()[pri:2, instance:tests.SignInTest@6a4f787b]" name="testLoginMsg" duration-ms="1421" started-at="2019-05-20T01:21:38Z" description="Login with invalid id and pwd" finished-at="2019-05-20T01:21:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoginMsg -->
+        <test-method status="PASS" signature="refreshBrowser()[pri:0, instance:tests.SignInTest@6a4f787b]" name="refreshBrowser" is-config="true" duration-ms="786" started-at="2019-05-20T01:21:39Z" finished-at="2019-05-20T01:21:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- refreshBrowser -->
+        <test-method status="PASS" signature="initialisePage()[pri:0, instance:tests.SignInTest@6a4f787b]" name="initialisePage" is-config="true" duration-ms="0" started-at="2019-05-20T01:21:40Z" finished-at="2019-05-20T01:21:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialisePage -->
+        <test-method status="PASS" signature="testPageTitle()[pri:3, instance:tests.SignInTest@6a4f787b]" name="testPageTitle" duration-ms="1028" started-at="2019-05-20T01:21:40Z" description="Login with valid credentials" finished-at="2019-05-20T01:21:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPageTitle -->
+        <test-method status="PASS" signature="refreshBrowser()[pri:0, instance:tests.SignInTest@6a4f787b]" name="refreshBrowser" is-config="true" duration-ms="1077" started-at="2019-05-20T01:21:41Z" finished-at="2019-05-20T01:21:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- refreshBrowser -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:tests.SignInTest@6a4f787b]" name="tearDown" is-config="true" duration-ms="1169" started-at="2019-05-20T01:21:42Z" finished-at="2019-05-20T01:21:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.SignInTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Selenium Test Suite -->
+</testng-results>

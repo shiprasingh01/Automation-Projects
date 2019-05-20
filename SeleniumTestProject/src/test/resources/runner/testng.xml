@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Selenium Test Suite">
+
+	<listeners>
+		<listener class-name="listeners.CustomListeners" />
+		<listener class-name="org.uncommons.reportng.HTMLReporter" />
+	</listeners>
+
+	<test name="Test - Sign in">
+		<classes>
+			<class name="tests.SignInTest" />
+		</classes>
+	</test> <!-- Test -->
+	<test name="Test - After Login">
+		<classes>
+			<class name="tests.AfterLogin" />
+		</classes>
+	</test> <!-- Test -->
+	<test name="Test - Tasks">
+		<classes>
+			<class name="tests.Tasks" />
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->
